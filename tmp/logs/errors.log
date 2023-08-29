@@ -169,3 +169,60 @@
 [2023-08-29 00:53:06] Текст ошибки: Страница не найдена
           | Строка: 69
 =================
+[2023-08-29 01:29:28] Текст ошибки: wfm\Controller::getModel(): Return value must be of type string, none returned
+          | Строка: 43
+=================
+[2023-08-29 12:31:52] Текст ошибки: Call to undefined method app\controllers\admin\MainController::getView()
+          | Строка: 68
+=================
+[2023-08-29 12:32:47] Текст ошибки: Call to undefined method app\controllers\admin\MainController::getView()
+          | Строка: 68
+=================
+[2023-08-29 12:33:06] Текст ошибки: Call to undefined method app\controllers\admin\MainController::getView()
+          | Строка: 68
+=================
+[2023-08-29 12:33:24] Текст ошибки: Call to undefined method app\controllers\admin\MainController::getView()
+          | Строка: 68
+=================
+[2023-08-29 12:34:08] Текст ошибки: Call to undefined method app\controllers\admin\MainController::getView()
+          | Строка: 68
+=================
+[2023-08-29 12:34:56] Текст ошибки: Call to undefined method app\controllers\admin\MainController::getView()
+          | Строка: 69
+=================
+[2023-08-29 12:35:23] Текст ошибки: Call to undefined method app\controllers\admin\MainController::getView()
+          | Строка: 68
+=================
+[2023-08-29 12:36:32] Текст ошибки: Call to undefined method app\controllers\admin\MainController::getView()
+          | Строка: 68
+=================
+[2023-08-29 12:36:33] Текст ошибки: Call to undefined method app\controllers\admin\MainController::getView()
+          | Строка: 68
+=================
+[2023-08-29 12:36:33] Текст ошибки: Call to undefined method app\controllers\admin\MainController::getView()
+          | Строка: 68
+=================
+[2023-08-29 12:36:46] Текст ошибки: Call to undefined method app\controllers\admin\MainController::getView()
+          | Строка: 68
+=================
+[2023-08-29 12:37:50] Текст ошибки: Undefined property: app\controllers\admin\MainController::$view
+          | Строка: 68
+=================
+[2023-08-29 12:53:38] Текст ошибки: Не найден вид C:\OSPanel\domains\MyNewFramework/app/views/admin/Main/index.php
+          | Строка: 39
+=================
+[2023-08-29 12:53:49] Текст ошибки: Не найден вид C:\OSPanel\domains\MyNewFramework/app/views/admin/Main/index.php
+          | Строка: 39
+=================
+[2023-08-29 13:00:21] Текст ошибки: Не найден шаблон C:\OSPanel\domains\MyNewFramework/app/views/layouts/mynewframework.php
+          | Строка: 49
+=================
+[2023-08-29 13:00:37] Текст ошибки: Не найден шаблон C:\OSPanel\domains\MyNewFramework/app/views/layouts/mynewframework.php
+          | Строка: 49
+=================
+[2023-08-29 13:01:10] Текст ошибки: Не найден шаблон C:\OSPanel\domains\MyNewFramework/app/views/layouts/test.php
+          | Строка: 49
+=================
+[2023-08-29 13:01:21] Текст ошибки: Не найден шаблон C:\OSPanel\domains\MyNewFramework/app/views/layouts/mynewframework.php
+          | Строка: 49
+=================

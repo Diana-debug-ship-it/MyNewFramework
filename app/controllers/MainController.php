@@ -1,10 +1,14 @@
 <?php
 
 namespace app\controllers;
-class MainController
+use wfm\Controller;
+
+class MainController extends Controller
 {
+
     public function indexAction()
     {
-        echo __METHOD__;
+        $this->setMeta('Главная страница', 'Description', 'keywords');
+        $this->set(['test' => 'TEST_VAR', 'name' => 'NAME']);
     }
 }
