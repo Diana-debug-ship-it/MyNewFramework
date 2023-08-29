@@ -2,7 +2,14 @@
 
 namespace app\models;
 
-class Main
-{
+use RedBeanPHP\R;
+use wfm\Model;
 
+class Main extends Model
+{
+    public function getNames()
+    {
+        $names = R::findAll('name');
+        return $names;
+    }
 }

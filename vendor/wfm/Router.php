@@ -43,7 +43,7 @@ class Router
     private static function contains(string $str, $symb): bool
     {
         for ($i = 0; $i < strlen($str); $i++) {
-            if ($str[$i] === $symb){
+            if ($str[$i] === $symb) {
                 return true;
             }
         }
@@ -63,6 +63,8 @@ class Router
                 /** @var Controller $controllerObject */
 
                 $controllerObject = new $controller(self::$route);
+                $controllerObject->getModel();
+
                 $action = self::lowerCamelCase(self::$route['action'] . 'Action');
 
                 if (method_exists($controllerObject, $action)) {
