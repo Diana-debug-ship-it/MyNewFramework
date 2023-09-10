@@ -44,7 +44,7 @@ use wfm\View;
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h3 class="section-title">Рекомендуемые товары</h3>
+                <h3 class="section-title"><?php __('main_index_meta_featured_products'); ?></h3>
             </div>
 
             <?php $this->getPart('parts/products_loop', compact('products')); ?>
@@ -57,34 +57,34 @@ use wfm\View;
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h3 class="section-title">Наши преимущества</h3>
+                <h3 class="section-title"><?php __('main_index_services_our_advantages'); ?></h3>
             </div>
 
             <div class="col-md-3 col-sm-6">
                 <div class="service-item">
                     <p class="text-center"><i class="fas fa-shipping-fast"></i></p>
-                    <p>Прямые поставки от производителей</p>
+                    <p><?php __('main_index_services_deliveries'); ?></p>
                 </div>
             </div>
 
             <div class="col-md-3 col-sm-6">
                 <div class="service-item">
                     <p class="text-center"><i class="fas fa-cubes"></i></p>
-                    <p>Широкий ассортимент товара</p>
+                    <p><?php __('main_index_services_wide_range_of_goods'); ?></p>
                 </div>
             </div>
 
             <div class="col-md-3 col-sm-6">
                 <div class="service-item">
                     <p class="text-center"><i class="fas fa-hand-holding-usd"></i></p>
-                    <p>Приятные и конкуретные цены</p>
+                    <p><?php __('main_index_services_prices'); ?></p>
                 </div>
             </div>
 
             <div class="col-md-3 col-sm-6">
                 <div class="service-item">
                     <p class="text-center"><i class="fas fa-user-cog"></i></p>
-                    <p>Профессиональная консультация и сервис</p>
+                    <p><?php __('main_index_services_service'); ?></p>
                 </div>
             </div>
 

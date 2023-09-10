@@ -1,5 +1,7 @@
 <?php
+
 use wfm\View;
+
 /** @var $this View */
 
 ?>
@@ -8,26 +10,26 @@ use wfm\View;
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-6">
-                    <h4>Информация</h4>
+                    <h4><?php __('footer_table_working_hours'); ?></h4>
                     <ul class="list-unstyled">
-                        <li><a href="#">Главная</a></li>
-                        <li><a href="#">О магазине</a></li>
-                        <li><a href="#">Оплата и доставка</a></li>
-                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#"><?php __('footer_table_homepage'); ?></a></li>
+                        <li><a href="#"><?php __('footer_table_about'); ?></a></li>
+                        <li><a href="#"><?php __('footer_table_payment_deliver'); ?></a></li>
+                        <li><a href="#"><?php __('footer_table_contacts'); ?></a></li>
                     </ul>
                 </div>
 
                 <div class="col-md-3 col-6">
-                    <h4>Время работы</h4>
+                    <h4><?php __('footer_table_homepage'); ?></h4>
                     <ul class="list-unstyled">
-                        <li>г. Киев, ул. Пушкина, 10</li>
-                        <li>пн-вс: 9:00 - 18:00</li>
-                        <li>без перерыва</li>
+                        <li><?php __('footer_table_address'); ?></li>
+                        <li><?php __('footer_table_schedule'); ?></li>
+                        <li><?php __('footer_table_work_detail'); ?></li>
                     </ul>
                 </div>
 
                 <div class="col-md-3 col-6">
-                    <h4>Контакты</h4>
+                    <h4><?php __('footer_table_contacts'); ?></h4>
                     <ul class="list-unstyled">
                         <li><a href="tel:5551234567">555 123-45-67</a></li>
                         <li><a href="tel:5551234567">555 123-45-68</a></li>
@@ -36,7 +38,7 @@ use wfm\View;
                 </div>
 
                 <div class="col-md-3 col-6">
-                    <h4>Мы в сети</h4>
+                    <h4><?php __('footer_table_work_social_media'); ?></h4>
                     <div class="footer-icons">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-youtube"></i></a>
@@ -59,47 +61,8 @@ use wfm\View;
                 <h5 class="modal-title" id="exampleModalLabel">Корзина</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                <table class="table text-start">
-                    <thead>
-                    <tr>
-                        <th scope="col">Фото</th>
-                        <th scope="col">Товар</th>
-                        <th scope="col">Кол-во</th>
-                        <th scope="col">Цена</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>
-                            <a href="#"><img src="<?= PATH ?>/assets/img/products/apple_cinema_30.jpg" alt=""></a>
-                        </td>
-                        <td><a href="#">Apple cinema</a></td>
-                        <td>1</td>
-                        <td>100</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="#"><img src="<?= PATH ?>/assets/img/products/canon_eos_5d_1.jpg" alt=""></a>
-                        </td>
-                        <td><a href="#">Canon EOS</a></td>
-                        <td>1</td>
-                        <td>100</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="#"><img src="<?= PATH ?>/assets/img/products/hp_1.jpg" alt=""></a>
-                        </td>
-                        <td><a href="#">HP</a></td>
-                        <td>1</td>
-                        <td>100</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger ripple" data-bs-dismiss="modal">Продолжить покупки</button>
-                <button type="button" class="btn btn-primary">Оформить заказ</button>
+            <div class="modal-cart-content">
+
             </div>
         </div>
     </div>
