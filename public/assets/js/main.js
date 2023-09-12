@@ -7,7 +7,30 @@ $(function () {
         const myModalEl = document.querySelector('#cart-modal');
         const modal = bootstrap.Modal.getOrCreateInstance(myModalEl);
         modal.show();
+
+        if ($('.cart-qty').text()) {
+            $('.count-items').text($('.cart-qty').text());
+        } else {
+            $('.count-items').text('0');
+        }
     }
+
+
+    $('#cart-modal .modal-cart-content').on('click', '.del-item', function (e) {
+       e.preventDefault();
+       const id = $(this).data('id');
+        $.ajax({
+            url: 'cart/delete',
+            type: 'GET',
+            data: {id: id},
+            success: function (res) {
+                showCart(res);
+            },
+            error: function () {
+                alert('Error!');
+            }
+        });
+    });
 
     $('#get-cart').on('click', function (e) {
        e.preventDefault();
@@ -23,18 +46,31 @@ $(function () {
        });
     });
 
+    $('#cart-modal .modal-cart-content').on('click', '#clear-cart', function (){
+        $.ajax({
+            url: 'cart/clear',
+            type: 'GET',
+            success: function (res) {
+                showCart(res);
+            },
+            error: function () {
+                alert('Error while clearing cart');
+            }
+        });
+    });
+
     $('.add-to-cart').on('click', function (e) {
         e.preventDefault();
         const id = $(this).data('id');
         const qty= $('#input-quantity').val() ? $('#input-quantity').val() : 1;
         const $this = $(this);
-
         $.ajax({
             url: 'cart/add',
             type: 'GET',
             data: {id: id, qty: qty},
             success: function (res) {
-                showCart(res)
+                showCart(res);
+                $this.find('i').removeClass('fa-shopping-cart').addClass('fa-luggage-cart');
             },
             error: function () {
                 alert('Error!');
