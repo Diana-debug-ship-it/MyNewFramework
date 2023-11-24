@@ -81,4 +81,18 @@ abstract class Controller
         require APP . "/views/{$prefix}{$this->route['controller']}/{$view}.php";
         die;
     }
+
+    /**
+     * @param $folder контроллер?? загружаем по имени папки
+     * @param $view сам вид
+     * @param $response возвращаемый код ответа
+     * @return void
+     */
+    public function error_404($folder = 'Error', $view = 404, $response = 404)
+    {
+        http_response_code($response);
+        $this->setMeta(___('tpl_error_404'));
+        $this->route['controller'] = $folder;
+        $this->view = $view;
+    }
 }

@@ -42,4 +42,19 @@ return [
     'tpl_wishlist_delete_success' => 'Товар удален из избранного',
     'tpl_wishlist_delete_error' => 'Ошибка удаления товара из избранного',
 
+    'tpl_error_404' => '404 - Страница не найдена',
+
+    'footer_table_info' => 'Информация',
+    'footer_table_homepage' => 'Главная',
+    'footer_table_about' => 'О магазине',
+    'footer_table_payment_deliver' => 'Оплата и доставка',
+    'footer_table_contacts' => 'Контакты',
+
+    'footer_table_working_hours' => 'Время работы',
+    'footer_table_address' => 'г. Киев, ул. Пушкина, 10',
+    'footer_table_schedule' => 'пн-вс: 9:00 - 18:00',
+    'footer_table_work_detail' => 'Без перерыва',
+
+    'footer_table_work_social_media' => 'Мы в сети',
+
 ];

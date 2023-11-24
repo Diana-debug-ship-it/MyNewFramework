@@ -48,4 +48,18 @@ return [
     'tpl_wishlist_delete_error' => 'Error removing a product from favorites',
 
     'tpl_error_404' => '404 - Page not found',
+
+    'footer_table_info' => 'Info',
+    'footer_table_homepage' => 'Home Page',
+    'footer_table_about' => 'About us',
+    'footer_table_payment_deliver' => 'Payment and delivery',
+    'footer_table_contacts' => 'Contacts',
+
+    'footer_table_working_hours' => 'Working hours',
+    'footer_table_address' => 'Kyiv, Pushkin street, 10',
+    'footer_table_schedule' => 'Monday-Sunday, 9 AM - 6 PM',
+    'footer_table_work_detail' => 'No dinner breaks',
+
+    'footer_table_work_social_media' => 'Check us on social media',
+
 ];
