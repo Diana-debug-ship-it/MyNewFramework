@@ -11,12 +11,12 @@ use wfm\View;
             <div class="row">
                 <div class="col-md-3 col-6">
                     <h4><?php __('footer_table_working_hours'); ?></h4>
-                    <ul class="list-unstyled">
-                        <li><a href="#"><?php __('footer_table_homepage'); ?></a></li>
-                        <li><a href="#"><?php __('footer_table_about'); ?></a></li>
-                        <li><a href="#"><?php __('footer_table_payment_deliver'); ?></a></li>
-                        <li><a href="#"><?php __('footer_table_contacts'); ?></a></li>
-                    </ul>
+                    <?php new \app\widgets\page\Page([
+                            'cache'=>0,
+                        'class'=>'list-unstyled',
+                        'prepend'=>'<li><a href="' . base_url() . '">' . ___('footer_table_homepage') . '</a></li>',
+
+                    ]) ?>
                 </div>
 
                 <div class="col-md-3 col-6">
@@ -80,6 +80,7 @@ $this->getDbLogs();
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
         crossorigin="anonymous"></script>
 <script src="<?= PATH ?>/assets/js/jquery.magnific-popup.min.js"></script>
+<script src="<?= PATH ?>/assets/js/sweetalert2.js"></script>
 <script src="<?= PATH ?>/assets/js/main.js"></script>
 
 </body>
