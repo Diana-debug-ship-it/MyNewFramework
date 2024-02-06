@@ -18,7 +18,7 @@
                 <div class="col-md-6 offset-md-3">
                     <div class="form-floating mb-3">
                         <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com"
-                               value="<?= get_field_value('email') ?>">
+                               value="<?= get_field_value('email') ?>" required>
                         <label class="required" for="email"><?php __('tpl_signup_email_input'); ?></label>
                     </div>
                 </div>
@@ -26,7 +26,7 @@
                 <div class="col-md-6 offset-md-3">
                     <div class="form-floating mb-3">
                         <input type="password" name="password" class="form-control" id="password"
-                               placeholder="password">
+                               placeholder="password" required>
                         <label class="required" for="password"><?php __('tpl_signup_password_input'); ?></label>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                 <div class="col-md-6 offset-md-3">
                     <div class="form-floating mb-3">
                         <input type="text" name="name" class="form-control" id="name" placeholder="Name"
-                               value="<?= get_field_value('name') ?>">
+                               value="<?= get_field_value('name') ?>" required>
                         <label class="required" for="name"><?php __('tpl_signup_name_input'); ?></label>
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                 <div class="col-md-6 offset-md-3">
                     <div class="form-floating mb-3">
                         <input type="text" name="address" class="form-control" id="address" placeholder="Address"
-                               value="<?= get_field_value('address') ?>">
+                               value="<?= get_field_value('address') ?>" required>
                         <label class="required" for="address"><?php __('tpl_signup_address_input'); ?></label>
                     </div>
                 </div>
