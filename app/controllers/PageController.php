@@ -21,6 +21,6 @@ class PageController extends AppController
         }
 
         $this->setMeta($page['title'], $page['description'], $page['keywords']);
-        $this->set(compact('page '));
+        $this->set(compact('page'));
     }
 }

@@ -19,6 +19,7 @@ class User extends AppModel
         'lengthMin' => [
             ['password', 6],
         ],
+        'optional' => ['email', 'password'],
     ];
 
     public array $labels = [
@@ -68,5 +69,43 @@ class User extends AppModel
             }
         }
         return false;
+    }
+
+    /*
+     * вернет количество заказов пользователя по его айди из данных сессии
+     * **/
+    public function getCountOrders($user_id): int
+    {
+        return R::count('orders', 'user_id = ?', [$user_id]);
+    }
+
+    public function get_user_orders($start, $perpage, $user_id): array
+    {
+        return R::getAll("SELECT * FROM orders WHERE user_id = ? ORDER BY id DESC LIMIT $start, $perpage", [$user_id]);
+    }
+
+    public function get_user_order($id): array
+    {
+        return R::getAll("SELECT o.*, op.* FROM orders o JOIN order_product op on o.id = op.order_id WHERE o.id = ?", [$id]);
+    }
+
+    public function get_count_files(): int
+    {
+        return R::count('order_download', 'user_id = ? AND status = 1',
+        [$_SESSION['user']['id']]);
+    }
+
+    public function get_user_files($start, $perpage, $lang): array
+    {
+        return R::getAll("SELECT od.*, d.*, dd.* FROM order_download od JOIN download d on od.download_id = d.id 
+    JOIN download_description dd on d.id = dd.download_id WHERE od.user_id = ? AND od.status = 1 
+    AND dd.language_id = ? LIMIT $start, $perpage", [$_SESSION['user']['id'], $lang['id']]);
+    }
+
+    public function get_user_file($id, $lang): array
+    {
+        return R::getRow("SELECT od.*, d.*, dd.* FROM order_download od join download d on d.id = od.download_id 
+    JOIN download_description dd on d.id = dd.download_id
+    WHERE od.user_id = ? AND od.status = 1 AND od.download_id = ? AND dd.language_id = ?", [$_SESSION['user']['id'], $id, $lang['id']]);
     }
 }
